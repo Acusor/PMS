@@ -25,6 +25,8 @@ namespace proiect
             {
                 Console.WriteLine(mas.model);
             }
+
+            Console.WriteLine("testez");
         }
         
     }
