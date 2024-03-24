@@ -108,12 +108,4 @@ namespace proiect
     }
 }
 
-    /*class Masinitza
-    {
-        public String model;
-        public Masinitza(string model)
-        {
-            this.model = model;
-        }
-
-    }*/
+    
