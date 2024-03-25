@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PMS
 {
-    public class Farmacie
+    internal class Farmacie
     {
         private List<Medicament> listaMedicamente;
 
@@ -37,6 +37,21 @@ namespace PMS
             {
                 Console.WriteLine(medicament);
             }
+        }
+
+         public List<Medicament> CautaMedicamente(Func<Medicament, bool> criteriu)
+        {
+            List<Medicament> rezultat = new List<Medicament>();
+
+            foreach (var medicament in listaMedicamente)
+            {
+                if (criteriu(medicament))
+                {
+                    rezultat.Add(medicament);
+                }
+            }
+
+            return rezultat;
         }
     }
 }

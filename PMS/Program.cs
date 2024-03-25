@@ -32,6 +32,7 @@ namespace proiect
 
                     case "3":
                         Console.WriteLine("test3");
+                        farmacie.CautaMedicamente(medicament=>medicament.Pret<10);
                         break;
                 }
             }
