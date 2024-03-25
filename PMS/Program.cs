@@ -1,54 +1,15 @@
-﻿using System;
+﻿using PMS;
+using System;
 
 namespace proiect
 {
     class Program
     {
 
-        class Sistem
-        {
-
-        }
-        class Medicamente
-        {
-            public int id { get; set; }
-            public string nume { get; set; }
-
-            public string categorie { get; set; }
-            public string descriere { get; set; }
-            public double pret { get; set; }
-            public int cantitate { get; set; }
-            public string dataexpirare{get;set;}
-
-           
-        }
-        class Furnizor
-        {
-
-        }
-        class Inventar
-        {
-
-        }
-        class BazaDeDate
-        {
-
-        }
-        class Angajat
-        {
-
-        }
-        class Client
-        {
-
-        }
-        class Signin
-        {
-
-        }
-
+        
         public static void Main(string[] args)
         {
+            Farmacie farmacie = new Farmacie();
             while (true)
             {
                 Console.WriteLine("**Aplicatie de gestiune a unei farmacii");
@@ -60,11 +21,13 @@ namespace proiect
                 {
                     case "1":
                         Console.WriteLine("test");
-                        CitireTastatura();
+                        farmacie.AdaugaMedicament();
+                        
                         break;
 
                     case "2":
                         Console.WriteLine("test2");
+                        farmacie.AfiseazaMedicamente();
                         break;
 
                     case "3":
@@ -80,30 +43,7 @@ namespace proiect
 
 
 
-        static void CitireTastatura()
-        {
-            Console.WriteLine("Introduceti medicamentul:");
-            string m;
-            while((m=Console.ReadLine())!="atat")
-            {
-                string[] listamedicamente = m.Split(',');
-                Medicamente medicament = new Medicamente
-                {
-                    id = int.Parse(listamedicamente[0]),
-                    nume = listamedicamente[1],
-                    descriere = listamedicamente[2],
-                    pret = double.Parse(listamedicamente[3]),
-                    cantitate = int.Parse(listamedicamente[4]),
-                    dataexpirare =(listamedicamente[5])
 
-                };
-            }
-
-
-            
-           
-
-        }
 
     }
 }
